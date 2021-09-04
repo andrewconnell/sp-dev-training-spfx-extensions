@@ -10,10 +10,10 @@ import {
 } from '@microsoft/sp-application-base';
 import { Dialog } from '@microsoft/sp-dialog';
 
-import * as strings from 'HelloAppCustomizerApplicationCustomizerStrings';
-
 import styles from './HelloAppCustomizerApplicationCustomizer.module.scss';
 import { escape } from '@microsoft/sp-lodash-subset';
+
+import * as strings from 'HelloAppCustomizerApplicationCustomizerStrings';
 
 const LOG_SOURCE: string = 'HelloAppCustomizerApplicationCustomizer';
 
@@ -23,6 +23,7 @@ const LOG_SOURCE: string = 'HelloAppCustomizerApplicationCustomizer';
  * You can define an interface to describe it.
  */
 export interface IHelloAppCustomizerApplicationCustomizerProperties {
+  // This is an example; replace with your own property
   header: string;
   footer: string;
 }
@@ -39,7 +40,7 @@ export default class HelloAppCustomizerApplicationCustomizer
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
-
+    
     return Promise.resolve();
   }
 
@@ -59,18 +60,18 @@ export default class HelloAppCustomizerApplicationCustomizer
         PlaceholderName.Top,
         { onDispose: this._onDispose }
       );
-
+    
       if (!this._topPlaceholder) {
         console.error('The expected placeholder (Top) was not found.');
         return;
       }
-
+    
       if (this.properties) {
         let headerMessage: string = this.properties.header;
         if (!headerMessage) {
           headerMessage = '(header property was not defined.)';
         }
-
+    
         if (this._topPlaceholder.domElement) {
           this._topPlaceholder.domElement.innerHTML = `
             <div class="${styles.app}">
@@ -87,18 +88,18 @@ export default class HelloAppCustomizerApplicationCustomizer
         PlaceholderName.Bottom,
         { onDispose: this._onDispose }
       );
-
+    
       if (!this._bottomPlaceholder) {
         console.error('The expected placeholder (Bottom) was not found.');
         return;
       }
-
+    
       if (this.properties) {
         let footerMessage: string = this.properties.footer;
         if (!footerMessage) {
           footerMessage = '(footer property was not defined.)';
         }
-
+    
         if (this._bottomPlaceholder.domElement) {
           this._bottomPlaceholder.domElement.innerHTML = `
             <div class="${styles.app}">
