@@ -17,6 +17,7 @@ import styles from './HelloFieldCustomizerFieldCustomizer.module.scss';
  * You can define an interface to describe it.
  */
 export interface IHelloFieldCustomizerFieldCustomizerProperties {
+  // This is an example; replace with your own property
   greenMinLimit?: string;
   yellowMinLimit?: string;
 }
@@ -72,6 +73,7 @@ export default class HelloFieldCustomizerFieldCustomizer
           </div>
         </div>`;
     }
+
   }
 
   @override

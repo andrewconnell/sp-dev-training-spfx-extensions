@@ -4,10 +4,10 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://m365x285179.sharepoint.com/sites/DeveloperSite/Lists/Work%20Status/AllItems.aspx",
+      "pageUrl": "https://contoso.sharepoint.com/sites/DeveloperSite/Lists/Work%20Status/AllItems.aspx",
       "fieldCustomizers": {
         "PercentComplete": {
-          "id": "2e21f2f7-a8b7-4633-ae13-b1ddea820e2e",
+          "id": "4e58bd95-59fd-4836-91f5-0cb2f5f77953",
           "properties": {
             "greenMinLimit": "85",
             "yellowMinLimit": "70"
@@ -19,7 +19,7 @@
       "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
       "fieldCustomizers": {
         "InternalFieldName": {
-          "id": "2e21f2f7-a8b7-4633-ae13-b1ddea820e2e",
+          "id": "4e58bd95-59fd-4836-91f5-0cb2f5f77953",
           "properties": {
             "sampleText": "Value"
           }
